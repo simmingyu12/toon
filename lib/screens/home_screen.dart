@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         foregroundColor: Colors.red,
         title: const Text(
-          "(심민규)오늘의 웹툰",
+          "(20200673 심민규)오늘의 웹툰",
           style: TextStyle(
             fontSize: 24,
           ),
