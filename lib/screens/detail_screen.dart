@@ -16,7 +16,7 @@ class DetailScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 2,
         backgroundColor: Colors.white,
-        foregroundColor: Colors.green,
+        foregroundColor: Colors.red,
         title: Text(
           title,
           style: const TextStyle(
@@ -32,20 +32,23 @@ class DetailScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 250,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 15,
-                      offset: const Offset(10, 10),
-                      color: Colors.black.withOpacity(0.3),
-                    )
-                  ],
+              Hero(
+                tag: id,
+                child: Container(
+                  width: 250,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 15,
+                        offset: const Offset(10, 10),
+                        color: Colors.black.withOpacity(0.3),
+                      )
+                    ],
+                  ),
+                  child: Image.network(thumb),
                 ),
-                child: Image.network(thumb),
               ),
             ],
           ),
